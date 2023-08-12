@@ -1,6 +1,8 @@
 package com.piscina.repository
 
-import com.piscina.model.Pool
+import com.piscina.entites.pool.domain.PoolEntity
 import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
 
-interface PoolRepository : JpaRepository<Pool, Long>
+@Repository
+interface PoolRepository : JpaRepository<PoolEntity, Long>
