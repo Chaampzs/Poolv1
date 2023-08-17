@@ -32,33 +32,6 @@ fun Map<String, List<String>>.getAuthorization(required: Boolean) : String? {
 
 }
 
-fun Map<String, List<String>>.getUserDocument(required: Boolean) : String? {
-
-	return when {
-		this.containsKey("userDocument") -> {
-			return this.getValue("userDocument")[0]
-		}
-		required -> {
-			throw IllegalArgumentException("Authentication obrigatório")
-		}
-		else -> null
-	}
-
-}
-
-fun Map<String, List<String>>.getDomain(required: Boolean) : String? {
-
-	return when {
-		this.containsKey("domain") -> {
-			return this.getValue("domain")[0]
-		}
-		required -> {
-			throw IllegalArgumentException("domain obrigatório")
-		}
-		else -> null
-	}
-
-}
 
 fun Map<String, List<String>>.getId(required: Boolean) : Long? {
 
@@ -74,11 +47,11 @@ fun Map<String, List<String>>.getId(required: Boolean) : Long? {
 
 }
 
-fun Map<String, List<String>>.getIdAsset(required: Boolean) : Long? {
+fun Map<String, List<String>>.getIdPool(required: Boolean) : Long? {
 
 	return when {
-		this.containsKey("idAsset") -> {
-			return this.getValue("idAsset")[0].toLong()
+		this.containsKey("idPool") -> {
+			return this.getValue("idPool")[0].toLong()
 		}
 		required -> {
 			throw IllegalArgumentException("idAsset obrigatório")

@@ -18,7 +18,7 @@ interface PoolService {
 
     fun getAll(): List <PoolEntity>
 
-    fun getById( id: Long) : PoolEntity
+    fun get( id: Long) : PoolEntity
 
 
 }

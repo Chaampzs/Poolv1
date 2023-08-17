@@ -115,15 +115,15 @@ class PoolServiceImpl ( val repository: PoolRepository) : PoolService {
         return response.toEntity()
     }
 
-    override fun getById (id: Long): PoolEntity{
+    override fun get (id: Long): PoolEntity{
 
         LOG.info("START GET Pool ", + id)
 
-        var response = getById(id)
+        var response = get(id)
 
         runCatching {
 
-             repository.findById(id);
+             repository.findById(id)
 
         }.onFailure {
 

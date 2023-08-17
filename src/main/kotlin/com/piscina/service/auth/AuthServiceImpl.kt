@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 
 //import org.springframework.stereotype.Service
-
+/*
 
 @Service
 //@Logger
@@ -15,10 +15,12 @@ class AuthServiceImpl() : AuthService {
 
 	val LOG = LoggerFactory.getLogger(AuthServiceImpl::class.java)
 
-	override fun validate(document: String, password: String) {
+	override fun validate(id: Long) {
 
-		(password != "1234").yes {
+
 			throw AuthUnauthorizedException()
 		}
 	}
-}
+
+
+ */
